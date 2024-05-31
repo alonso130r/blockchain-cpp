@@ -2,8 +2,8 @@
 // Created by Vijay Goyal on 2024-05-29.
 //
 
-#include "block.h"
-#include "sha256.h"
+#include "../include/block.h"
+#include "../include/sha256.h"
 #include <iostream>
 #include <sstream>
 
@@ -29,7 +29,7 @@ std::string Block::calculateHash() const {
 }
 
 std::string Block::getHash() const {
-    return hash;
+    return Hash;
 }
 
 std::string Block::getPreviousHash() const {

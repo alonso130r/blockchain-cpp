@@ -3,7 +3,8 @@
 //
 
 #include <iostream>
-#include "blockchain.h"
+#include "../include/blockchain.h"
+#include "../include/block.h"
 
 int main() {
     Blockchain bChain = Blockchain();

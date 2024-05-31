@@ -4,4 +4,4 @@ project(blockchain_cpp)
 set(CMAKE_CXX_STANDARD 21)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-include_directories(include)
+target_include_directories(test PRIVATE include)
