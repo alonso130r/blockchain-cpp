@@ -3,7 +3,7 @@
 //
 
 #include <cstring>
-#include "sha256.h"
+#include "../include/sha256.h"
 
 const u_int32_t K[64] = {
         0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5,
