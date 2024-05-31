@@ -149,6 +149,18 @@ void sha256_transform(SHA256_CTX *ctx, const unsigned char data[]) {
     ctx->state[7] += h;
 }
 
+void sha256_update(SHA256_CTX *ctx, const unsigned char data[], size_t len) {
+    for (size_t i = 0; i < len; ++i) {
+        ctx->data[ctx->datalen] = data[i];
+        ctx->datalen++;
+        if (ctx->datalen == 64) {
+            sha256_transform(ctx, ctx->data);
+            ctx->bitlen += 512;
+            ctx->datalen = 0;
+        }
+    }
+}
+
 void sha256_init(SHA256_CTX *ctx) {
     ctx->datalen = 0;
     ctx->bitlen = 0;

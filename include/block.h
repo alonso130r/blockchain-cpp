@@ -21,7 +21,7 @@ private:
     std::string data;
     std::time_t timestamp;
     std::string previousHash;
-    std::string Hash;
+    std::string hash;
 };
 
 #endif //BLOCKCHAIN_CPP_BLOCK_H

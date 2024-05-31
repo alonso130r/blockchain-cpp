@@ -6,6 +6,7 @@
 #include "../include/sha256.h"
 #include <iostream>
 #include <sstream>
+#include <iomanip>
 
 Block::Block(int idx, const std::string &data) : index(idx), data(data), timestamp(std::time(nullptr)), previousHash(""), hash(calculateHash()) {}
 
@@ -29,7 +30,7 @@ std::string Block::calculateHash() const {
 }
 
 std::string Block::getHash() const {
-    return Hash;
+    return hash;
 }
 
 std::string Block::getPreviousHash() const {

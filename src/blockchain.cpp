@@ -2,14 +2,14 @@
 // Created by Vijay Goyal on 2024-05-30.
 //
 
-#include "blockchain.h"
+#include "../include/blockchain.h"
 #include <iostream>
 
 Blockchain::Blockchain() {
-    chain.emplace_back(Block(0, "Genesis Block"));
+    chain.emplace_back(0, "Genesis Block");
 }
 
-void Blockchain::addBlock(const int &newBlock) {
+void Blockchain::addBlock(const Block &newBlock) {
     Block block = newBlock;
     block.setPreviousHash(chain.back().getHash());
     chain.push_back(block);

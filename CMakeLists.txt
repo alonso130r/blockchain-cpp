@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
 project(blockchain_cpp)
 
-set(CMAKE_CXX_STANDARD 21)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-target_include_directories(test PRIVATE include)
+include_directories(include)
+
+add_executable(blockchain_cpp src/main.cpp src/block.cpp src/blockchain.cpp src/sha256.cpp)
